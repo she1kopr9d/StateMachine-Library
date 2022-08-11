@@ -24,11 +24,11 @@ input <- output и double <-> double
 	Пример машины состояния -> \testState.xml
 
 	Примеры использования:
-1. конвертация XML файла в SMF для дальнейшего использования:
+ - конвертация XML файла в SMF для дальнейшего использования:
 	smf.converter fileConverter = new smf.converter();
 	fileConverter.Init("директория куда сохранить файл", "директория файла XML");
 	fileConverter.serialize(); // создаёт файл с таким же названием как 
-2. десериализация файла в обьект состояния:
+ - десериализация файла в обьект состояния:
 	smf.reader fileReader = new smf.reader();
 	fileReader.Init("директория SMF файла");
 	smf.state myState = fileReader.deserialize(); // возвращает обьект с начальный состоянием, 
@@ -44,17 +44,17 @@ Idle.Go.Walk
 и т.д.
 
 	В реализации Unity (namespace smf.Unity) существуют 3 обьекта 
-1. smf.Unity.StateMachine 
+ - smf.Unity.StateMachine 
 	Этот обьект крепится на игровой обьект в Unity и при запуске инициализируется.
-2. smf.Unity.StateMachineLink
+ - smf.Unity.StateMachineLink
 	Данный обьект инициализируется в любое время и прикрепляется к одной машине состояния,
 	этот обьект несёт 3 задачи:
 
-	1. bool Move(string link)
+	- bool Move(string link)
 		Попытка перехода состояния, возвращает удачная ли.
-	2. bool Cheak(string link)
+	- bool Cheak(string link)
 		Возвращает равна ли данное состояние и состояние в машине состояния.
-	3. void AddListener(UnityAction<string> listener)
+	- void AddListener(UnityAction<string> listener)
 		Добавляет слушателя к ивенту машины состояния, 
 		данный ивет выполняется при каждой смене состояния.
 
