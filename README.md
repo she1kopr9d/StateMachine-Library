@@ -21,20 +21,7 @@ input <- output и double <-> double
 	Теги можно прописывать через запятую, в одном состоянии могут находится несколько тегов, 
 	а так же теги разных ключей
 
-	Пример машины состояния ->
-/*
-<Idle i:"main">
-	<Go d"jumpGo">
-		<Walk o:"main"></Walk>
-		<Run o:"main"></Run>
-	</Go>
-	<Jump d"jumpGo"></Jump>
-	<Swim>
-		<SwimIdle o:"main"></SwimIdle>
-		<Swim></Swim>
-	</Swim>
-</Idle>. 
-*/
+	Пример машины состояния -> \testState.xml
 
 	Примеры использования:
 1. конвертация XML файла в SMF для дальнейшего использования:

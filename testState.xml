@@ -1,0 +1,11 @@
+<Idle i:"main">
+	<Go d"jumpGo">
+		<Walk o:"main"></Walk>
+		<Run o:"main"></Run>
+	</Go>
+	<Jump d"jumpGo"></Jump>
+	<Swim>
+		<SwimIdle o:"main"></SwimIdle>
+		<Swim></Swim>
+	</Swim>
+</Idle>. 
